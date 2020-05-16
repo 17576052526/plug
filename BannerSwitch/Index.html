@@ -1,0 +1,122 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title></title>
+    <script type="text/javascript" src="Sys/jquery-1.9.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Sys/css.css" />
+    <style type="text/css">
+        .width {
+            /* 响应式 */
+            max-width: 1200px;
+            width: 100%;
+            overflow: hidden;
+            /* 非响应式-固定宽度 */
+            /* width:1200px; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="js/bannerFade.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bannerFade.css" />
+    <script type="text/javascript">
+        $(function () {
+            $('#bannerFade').bannerFade({
+                interval: 5000,
+                speed: 500,
+                isHoverStop: false,    //悬浮其上停止计时器，移动端一定要是false
+                callback: null
+            });
+        });
+    </script>
+    <style type="text/css">
+        .bannerFade {
+            height: 460px;
+        }
+
+            .bannerFade ul img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+        @media (max-width: 992px) {
+            .bannerFade {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bannerFade {
+                height: 200px;
+            }
+        }
+    </style>
+    <div id="bannerFade" class="bannerFade width">
+        <ul>
+            <li><img src="img/banner1.jpg" /></li>
+            <li><img src="img/banner2.jpg" /></li>
+            <li><img src="img/banner3.jpg" /></li>
+        </ul>
+        <!--按钮-->
+        <ol></ol>
+    </div>
+
+    <script type="text/javascript" src="js/bannerSlide.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bannerSlide.css" />
+    <script type="text/javascript">
+        $(function () {
+            $('#bannerSlide').bannerSlide({
+                interval: 5000,
+                speed: 500,
+                isHoverStop: false,    //悬浮其上停止计时器，移动端一定要是false
+                callback: null
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        .bannerSlide {
+            height: 460px;
+        }
+
+            .bannerSlide ul img {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+        @media (max-width: 992px) {
+            .bannerSlide {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .bannerSlide {
+                height: 200px;
+            }
+        }
+    </style>
+    <div id="bannerSlide" class="bannerSlide width">
+        <div class="bannerSlideBox">
+            <ul>
+                <li><img src="img/banner1.jpg" /></li>
+                <li><img src="img/banner2.jpg" /></li>
+                <li><img src="img/banner3.jpg" /></li>
+            </ul>
+        </div>
+        <!--按钮-->
+        <ol></ol>
+    </div>
+
+    <!--撑高高度，仅测试用，可以直接删除-->
+    <div style="height:10000px;"></div>
+
+</body>
+</html>
